@@ -1,0 +1,444 @@
+/* ============================================================
+   HARVEST DETAIL STYLES
+   ============================================================ */
+
+.detail-breadcrumb {
+  padding-top: calc(var(--nav-height) + var(--sp-4));
+  padding-bottom: var(--sp-3);
+  background: var(--clr-white);
+  border-bottom: 1px solid var(--clr-gray-200);
+}
+
+.detail-breadcrumb__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  font-size: 0.88rem;
+}
+
+.detail-breadcrumb__back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  color: var(--clr-green-deep);
+  font-weight: 500;
+  transition: transform var(--transition-fast);
+}
+
+.detail-breadcrumb__back:hover {
+  transform: translateX(-4px);
+}
+
+.detail-breadcrumb__trail {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  color: var(--clr-text-muted);
+}
+
+.detail-breadcrumb__trail .current {
+  color: var(--clr-green-deep);
+  font-weight: 600;
+}
+
+.detail-share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-1);
+  padding: 6px 12px;
+  background: var(--clr-gray-100);
+  border: 1px solid var(--clr-gray-200);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--clr-text-light);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.detail-share-btn:hover {
+  background: var(--clr-white);
+  border-color: var(--clr-green-fresh);
+  color: var(--clr-green-deep);
+}
+
+/* Detail Hero */
+.detail-hero {
+  padding: var(--sp-12) 0 var(--sp-16);
+  border-bottom: 1px solid var(--clr-gray-200);
+}
+
+.detail-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: var(--sp-12);
+  align-items: center;
+}
+
+.detail-hero__visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-6);
+}
+
+.detail-hero__art {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 1;
+  background: var(--clr-white);
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+  border: 3px solid;
+  overflow: hidden;
+}
+
+.detail-hero__real-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  display: block;
+}
+
+.detail-view-flyer-btn {
+  background: var(--clr-white);
+  border-color: var(--clr-green-deep);
+  color: var(--clr-green-deep);
+  font-weight: 600;
+  transition: all var(--transition-base);
+}
+
+.detail-view-flyer-btn:hover {
+  background: var(--clr-green-deep);
+  color: var(--clr-white);
+}
+
+/* FLYER MODAL LIGHTBOX */
+.flyer-modal-content {
+  background: var(--clr-white);
+  border-radius: var(--radius-xl);
+  max-width: 680px;
+  width: 95%;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  animation: modalScale 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.flyer-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-4) var(--sp-6);
+  border-bottom: 1px solid var(--clr-gray-200);
+  background: var(--clr-cream);
+}
+
+.flyer-modal-close-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--clr-text-muted);
+  padding: 6px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.flyer-modal-close-btn:hover {
+  background: var(--clr-gray-200);
+  color: var(--clr-text);
+}
+
+.flyer-modal-body {
+  overflow-y: auto;
+  padding: var(--sp-4);
+  background: #18221c;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.flyer-modal-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 25px rgba(0,0,0,0.6);
+}
+
+.flyer-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-3) var(--sp-6);
+  border-top: 1px solid var(--clr-gray-200);
+  background: var(--clr-white);
+}
+
+.detail-hero__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  justify-content: center;
+  max-width: 380px;
+}
+
+.detail-hero__title {
+  margin: var(--sp-2) 0 var(--sp-1);
+}
+
+.detail-hero__tagline {
+  font-size: 1.15rem;
+  color: var(--clr-green-mid);
+  font-weight: 500;
+  margin-bottom: var(--sp-4);
+}
+
+.detail-hero__desc {
+  color: var(--clr-text-light);
+  margin-bottom: var(--sp-6);
+  line-height: 1.7;
+}
+
+.detail-flavour-box {
+  background: var(--clr-white);
+  padding: var(--sp-4) var(--sp-5);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--clr-green-deep);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--sp-6);
+}
+
+.detail-flavour-box__label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--clr-text-muted);
+  display: block;
+  margin-bottom: var(--sp-1);
+}
+
+.detail-flavour-box__text {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--clr-green-deep);
+}
+
+.detail-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-8);
+}
+
+.detail-spec {
+  background: var(--clr-white);
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--clr-gray-200);
+}
+
+.detail-spec__title {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--clr-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.detail-spec__val {
+  font-weight: 600;
+  color: var(--clr-green-deep);
+  font-size: 0.95rem;
+}
+
+.detail-hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-4);
+}
+
+/* Nutrients */
+.nutrients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--sp-4);
+}
+
+.nutrient-card {
+  background: var(--clr-white);
+  border-radius: var(--radius-md);
+  padding: var(--sp-5);
+  border: 1px solid var(--clr-gray-200);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.nutrient-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--clr-green-pale);
+}
+
+.nutrient-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--sp-2);
+}
+
+.nutrient-card__name {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--clr-green-deep);
+}
+
+.nutrient-card__amount {
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.nutrient-card__benefit {
+  font-size: 0.85rem;
+  color: var(--clr-text-muted);
+  line-height: 1.5;
+}
+
+/* Benefits & Dosage 2-Col */
+.detail-card-panel {
+  background: var(--clr-white);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-8);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--clr-gray-200);
+}
+
+.benefits-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.benefit-item {
+  display: flex;
+  gap: var(--sp-3);
+  align-items: flex-start;
+}
+
+.benefit-item__icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.benefit-item__title {
+  font-weight: 600;
+  color: var(--clr-green-deep);
+  font-size: 0.98rem;
+  margin-bottom: 2px;
+}
+
+.benefit-item__desc {
+  font-size: 0.88rem;
+  color: var(--clr-text-light);
+  line-height: 1.5;
+}
+
+.dosage-box {
+  background: var(--clr-green-bg);
+  border: 1px solid var(--clr-green-pale);
+  border-radius: var(--radius-md);
+  padding: var(--sp-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.dosage-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dosage-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: var(--clr-green-fresh);
+}
+
+.dosage-val {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--clr-green-deep);
+}
+
+.storage-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.storage-item {
+  display: flex;
+  gap: var(--sp-2);
+  font-size: 0.88rem;
+  color: var(--clr-text-light);
+  line-height: 1.5;
+}
+
+.storage-bullet {
+  color: var(--clr-green-fresh);
+  font-weight: bold;
+}
+
+/* Culinary */
+.detail-culinary__box {
+  background: var(--clr-cream);
+  border-radius: var(--radius-xl);
+  padding: var(--sp-10) var(--sp-8);
+  text-align: center;
+  max-width: 840px;
+  margin: 0 auto;
+  border: 1px solid var(--clr-gray-200);
+}
+
+.food-uses-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  justify-content: center;
+}
+
+.food-use-chip {
+  padding: 8px 18px;
+  background: var(--clr-white);
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--clr-green-deep);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--clr-gray-300);
+}
+
+@media (max-width: 900px) {
+  .detail-hero__grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-8);
+  }
+}

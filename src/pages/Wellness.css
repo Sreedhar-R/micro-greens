@@ -1,0 +1,327 @@
+/* ============================================================
+   WELLNESS PAGE STYLES
+   ============================================================ */
+
+.wellness-hero {
+  padding: calc(var(--nav-height) + var(--sp-16)) 0 var(--sp-16);
+  background: linear-gradient(135deg, #133a23 0%, #0a1f13 100%);
+}
+
+.wellness-hero__content {
+  max-width: 820px;
+}
+
+.wellness-hero__desc {
+  margin-top: var(--sp-4);
+  font-size: 1.15rem;
+  opacity: 0.9;
+}
+
+/* Multipliers */
+.multipliers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--sp-6);
+}
+
+.multiplier-card {
+  background: var(--clr-white);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-6);
+  border: 1px solid var(--clr-gray-200);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  transition: transform var(--transition-fast);
+}
+
+.multiplier-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--clr-green-pale);
+}
+
+.multiplier-badge {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--clr-green-fresh);
+  margin-bottom: var(--sp-2);
+}
+
+.multiplier-name {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--clr-green-deep);
+  margin-bottom: var(--sp-3);
+}
+
+.multiplier-comparison {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: 0.85rem;
+  color: var(--clr-text-muted);
+}
+
+.comparison-arrow {
+  color: var(--clr-green-fresh);
+  font-weight: bold;
+}
+
+/* Phyto Grid */
+.phyto-grid {
+  gap: var(--sp-6);
+}
+
+.phyto-card {
+  background: var(--clr-white);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-8);
+  border: 1px solid var(--clr-gray-200);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+}
+
+.phyto-card__header {
+  display: flex;
+  gap: var(--sp-4);
+  align-items: center;
+  margin-bottom: var(--sp-4);
+}
+
+.phyto-card__img {
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--clr-green-pale);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.phyto-emoji {
+  font-size: 2.8rem;
+}
+
+.phyto-name {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--clr-green-deep);
+}
+
+.phyto-source {
+  font-size: 0.85rem;
+  color: var(--clr-green-fresh);
+  font-weight: 500;
+}
+
+.phyto-concentration {
+  background: var(--clr-green-bg);
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  color: var(--clr-green-deep);
+  margin-bottom: var(--sp-4);
+  border-left: 3px solid var(--clr-green-mid);
+}
+
+.phyto-desc {
+  font-size: 0.92rem;
+  color: var(--clr-text-light);
+  line-height: 1.6;
+  margin-bottom: var(--sp-5);
+  flex-grow: 1;
+}
+
+.phyto-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  border-top: 1px solid var(--clr-gray-200);
+  padding-top: var(--sp-4);
+}
+
+.phyto-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: 0.88rem;
+  color: var(--clr-text-light);
+}
+
+.phyto-check {
+  color: var(--clr-green-fresh);
+  flex-shrink: 0;
+}
+
+/* Daily Intake Planner */
+.planner-card {
+  background: var(--clr-white);
+  border-radius: var(--radius-xl);
+  padding: var(--sp-10) var(--sp-8);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--clr-gray-200);
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.planner-card__header {
+  text-align: center;
+  margin-bottom: var(--sp-8);
+}
+
+.planner-controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+  margin-bottom: var(--sp-8);
+}
+
+.planner-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.planner-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--clr-green-deep);
+}
+
+.toggle-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.toggle-btn {
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--clr-gray-300);
+  background: var(--clr-white);
+  font-size: 0.88rem;
+  color: var(--clr-text-light);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.toggle-btn:hover {
+  border-color: var(--clr-green-fresh);
+  color: var(--clr-green-deep);
+}
+
+.toggle-btn.active {
+  background: var(--clr-green-deep);
+  border-color: var(--clr-green-deep);
+  color: var(--clr-white);
+}
+
+.planner-result {
+  background: var(--clr-green-bg);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-6);
+  border: 1px solid var(--clr-green-pale);
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: var(--sp-6);
+  align-items: center;
+  margin-bottom: var(--sp-6);
+}
+
+.planner-result__metric {
+  text-align: center;
+  border-right: 1px solid var(--clr-green-pale);
+  padding-right: var(--sp-6);
+}
+
+.result-metric__num {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--clr-green-deep);
+  line-height: 1.1;
+}
+
+.result-metric__label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--clr-green-fresh);
+  margin-top: 4px;
+}
+
+.result-metric__sub {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--clr-text-muted);
+}
+
+.planner-result__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.result-detail-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.detail-tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--clr-green-fresh);
+  font-weight: 600;
+}
+
+.detail-val {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--clr-green-deep);
+}
+
+.planner-card__footer {
+  text-align: center;
+}
+
+/* Citations */
+.citations-box {
+  max-width: 820px;
+  margin: 0 auto;
+  color: var(--clr-text-muted);
+}
+
+.citations-title {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: 1rem;
+  color: var(--clr-green-deep);
+  margin-bottom: var(--sp-2);
+}
+
+.citations-text {
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .planner-result {
+    grid-template-columns: 1fr;
+  }
+  .planner-result__metric {
+    border-right: none;
+    border-bottom: 1px solid var(--clr-green-pale);
+    padding-right: 0;
+    padding-bottom: var(--sp-4);
+  }
+}

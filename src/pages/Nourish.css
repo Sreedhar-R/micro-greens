@@ -1,0 +1,311 @@
+/* ============================================================
+   NOURISH PAGE STYLES
+   ============================================================ */
+
+.nourish-hero {
+  padding: calc(var(--nav-height) + var(--sp-16)) 0 var(--sp-16);
+  background: linear-gradient(135deg, #1f402c 0%, #11281b 100%);
+  position: relative;
+}
+
+.nourish-hero__content {
+  max-width: 800px;
+}
+
+.nourish-hero__desc {
+  margin-top: var(--sp-4);
+  font-size: 1.15rem;
+  opacity: 0.9;
+}
+
+/* Rules */
+.rules-grid {
+  gap: var(--sp-6);
+}
+
+.rule-card {
+  background: var(--clr-white);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-6);
+  border: 1px solid var(--clr-gray-200);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.rule-card__num {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--clr-green-fresh);
+  margin-bottom: var(--sp-2);
+  line-height: 1;
+}
+
+.rule-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--clr-green-deep);
+  margin-bottom: var(--sp-2);
+}
+
+.rule-card__desc {
+  font-size: 0.88rem;
+  color: var(--clr-text-light);
+  line-height: 1.5;
+}
+
+/* Filter pills */
+.recipe-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-8);
+}
+
+.recipe-filter-btn {
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--clr-gray-200);
+  background: var(--clr-white);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--clr-text-light);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.recipe-filter-btn:hover {
+  border-color: var(--clr-green-fresh);
+  color: var(--clr-green-deep);
+}
+
+.recipe-filter-btn.active {
+  background: var(--clr-green-deep);
+  border-color: var(--clr-green-deep);
+  color: var(--clr-white);
+}
+
+/* Recipe Grid */
+.recipe-grid {
+  gap: var(--sp-6);
+}
+
+.recipe-card {
+  background: var(--clr-white);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-6);
+  border: 1px solid var(--clr-gray-200);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.recipe-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.recipe-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--sp-3);
+}
+
+.recipe-card__emoji {
+  font-size: 2.4rem;
+}
+
+.recipe-card__meta {
+  display: flex;
+  gap: var(--sp-2);
+}
+
+.recipe-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  background: var(--clr-gray-100);
+  padding: 4px 8px;
+  border-radius: var(--radius-full);
+  color: var(--clr-text-muted);
+}
+
+.recipe-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--clr-green-deep);
+  margin-bottom: var(--sp-2);
+}
+
+.recipe-card__desc {
+  font-size: 0.9rem;
+  color: var(--clr-text-light);
+  line-height: 1.5;
+  margin-bottom: var(--sp-4);
+  flex-grow: 1;
+}
+
+.recipe-card__greens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-4);
+}
+
+.recipe-green-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px 3px 4px;
+}
+
+.recipe-green-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--clr-green-pale);
+}
+
+.recipe-card__btn {
+  width: 100%;
+}
+
+/* Modal */
+.recipe-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 30, 20, 0.65);
+  backdrop-filter: blur(6px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-4);
+}
+
+.recipe-modal {
+  background: var(--clr-white);
+  border-radius: var(--radius-xl);
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: var(--sp-8);
+  position: relative;
+  box-shadow: var(--shadow-xl);
+}
+
+.recipe-modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--clr-gray-100);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-text-muted);
+}
+
+.recipe-modal__header {
+  display: flex;
+  gap: var(--sp-4);
+  align-items: center;
+  margin-bottom: var(--sp-6);
+  padding-bottom: var(--sp-4);
+  border-bottom: 1px solid var(--clr-gray-200);
+}
+
+.recipe-modal__emoji {
+  font-size: 3rem;
+}
+
+.recipe-modal__meta {
+  display: flex;
+  gap: var(--sp-4);
+  font-size: 0.85rem;
+  color: var(--clr-text-muted);
+  margin-top: 4px;
+}
+
+.recipe-modal__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+}
+
+.recipe-modal__section h4 {
+  font-family: var(--font-serif);
+  color: var(--clr-green-deep);
+  font-size: 1.1rem;
+  margin-bottom: var(--sp-3);
+}
+
+.ingredients-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.ingredients-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: 0.9rem;
+  color: var(--clr-text-light);
+}
+
+.check-icon {
+  color: var(--clr-green-fresh);
+  flex-shrink: 0;
+}
+
+.steps-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.steps-list li {
+  display: flex;
+  gap: var(--sp-3);
+  font-size: 0.9rem;
+  color: var(--clr-text-light);
+  line-height: 1.5;
+}
+
+.step-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--clr-green-bg);
+  color: var(--clr-green-deep);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+}
+
+.recipe-modal__footer {
+  margin-top: var(--sp-6);
+  padding-top: var(--sp-4);
+  border-top: 1px solid var(--clr-gray-200);
+  display: flex;
+  justify-content: flex-end;
+}
