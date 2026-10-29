@@ -1,7 +1,7 @@
 // Product data extracted from the provided official Manna Microgreens infographic images
 export const products = [
   {
-    
+
     id: 'broccoli',
     slug: 'broccoli',
     image: '/images/products/broccoli.jpg',
@@ -55,7 +55,7 @@ export const products = [
     foodUses: ['Salads', 'Sandwiches & Wraps', 'Smoothies', 'Soups & Omelets', 'Rice & Grain Bowls'],
   },
   {
-    
+
     id: 'beetroot',
     slug: 'beetroot',
     image: '/images/products/beetroot.jpg',
@@ -111,7 +111,7 @@ export const products = [
     foodUses: ['Salads', 'Sandwiches & Wraps', 'Smoothies', 'Soups & Omelets', 'Rice & Grain Bowls'],
   },
   {
-    
+
     id: 'fenugreek',
     slug: 'fenugreek',
     image: '/images/products/fenugreek.jpg',
@@ -164,7 +164,7 @@ export const products = [
     foodUses: ['Salads', 'Sandwiches & Wraps', 'Smoothies', 'Soups & Omelets', 'Rice & Grain Bowls'],
   },
   {
-    
+
     id: 'flaxseeds',
     slug: 'flaxseeds',
     image: '/images/products/flaxseeds.jpg',
@@ -220,7 +220,7 @@ export const products = [
     foodUses: ['Salads', 'Sandwiches & Wraps', 'Smoothies', 'Soups & Omelets', 'Rice & Grain Bowls'],
   },
   {
-    
+
     id: 'radish-white',
     slug: 'radish-white',
     image: '/images/products/radish-white.jpg',
@@ -274,7 +274,7 @@ export const products = [
     foodUses: ['Salads', 'Sandwiches & Wraps', 'Soups', 'Rice & Grain Bowls', 'Omelets & Eggs'],
   },
   {
-    
+
     id: 'mustard',
     slug: 'mustard',
     image: '/images/products/mustard.jpg',
@@ -329,7 +329,7 @@ export const products = [
     foodUses: ['Salads', 'Sandwiches & Wraps', 'Smoothies', 'Soups & Omelets', 'Rice & Grain Bowls'],
   },
   {
-    
+
     id: 'radish-purple',
     slug: 'radish-purple',
     image: '/images/products/radish-purple.jpg',
@@ -383,7 +383,7 @@ export const products = [
     foodUses: ['Salads', 'Sandwiches & Wraps', 'Garnishes', 'Smoothies & Juices', 'Rice & Grain Bowls'],
   },
   {
-    
+
     id: 'red-amaranth',
     slug: 'red-amaranth',
     image: '/images/products/red-amaranth.jpg',
@@ -439,7 +439,7 @@ export const products = [
     foodUses: ['Salads', 'Sandwiches & Wraps', 'Smoothies', 'Soups & Omelets', 'Rice & Grain Bowls'],
   },
   {
-    
+
     id: 'spinach',
     slug: 'spinach',
     image: '/images/products/spinach.jpg',
@@ -495,7 +495,7 @@ export const products = [
     foodUses: ['Salads', 'Sandwiches & Wraps', 'Smoothies', 'Soups & Omelets', 'Rice & Grain Bowls'],
   },
   {
-    
+
     id: 'sunflower',
     slug: 'sunflower',
     image: '/images/products/sunflower.jpg',
@@ -550,7 +550,7 @@ export const products = [
     foodUses: ['Salads', 'Sandwiches & Wraps', 'Smoothies', 'Soups & Omelets', 'Rice & Grain Bowls'],
   },
   {
-    
+
     id: 'wheatgrass',
     slug: 'wheatgrass',
     image: '/images/products/wheatgrass.jpg',
@@ -606,7 +606,7 @@ export const products = [
     foodUses: ['Juice / Shots', 'Smoothies', 'Salads', 'Sandwiches & Wraps', 'Soups & Bowls'],
   },
   {
-    
+
     id: 'pea-shoots',
     slug: 'pea-shoots',
     image: '/images/products/pea-shoots.jpg',
@@ -656,7 +656,7 @@ export const products = [
     foodUses: ['Stir-ins', 'Salads', 'Spring Rolls & Wraps', 'Garnishes', 'Grain Bowls'],
   },
   {
-    
+
     id: 'pink-radish',
     slug: 'pink-radish',
     image: '/images/products/pink-radish.jpg',
@@ -705,7 +705,7 @@ export const products = [
     foodUses: ['Salads', 'Sandwiches', 'Avocado Toast', 'Tacos & Wraps', 'Garnishes'],
   },
   {
-    
+
     id: 'basil',
     slug: 'basil',
     image: '/images/products/basil.jpg',
@@ -754,6 +754,12 @@ export const products = [
     foodUses: ['Caprese Salads', 'Pizza & Pasta Topping', 'Pesto', 'Bruschetta', 'Cocktails & Mocktails'],
   },
 ];
+
+const BASE = import.meta.env.BASE_URL || '/';
+products.forEach(p => {
+  if (p.image && p.image.startsWith('/')) p.image = `${BASE}${p.image.slice(1)}`;
+  if (p.flyerImage && p.flyerImage.startsWith('/')) p.flyerImage = `${BASE}${p.flyerImage.slice(1)}`;
+});
 
 export const subscriptionPlans = [
   {

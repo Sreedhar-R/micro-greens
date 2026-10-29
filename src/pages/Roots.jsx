@@ -79,9 +79,9 @@ export default function Roots() {
 
             <div className="roots-visual-emblem">
               <div className="roots-emblem-card">
-                <img 
-                  src="/images/manna-logo.jpg" 
-                  alt="Manna Microgreens Official Brand Emblem" 
+                <img
+                  src={`${import.meta.env.BASE_URL}images/manna-logo.jpg`}
+                  alt="Manna Microgreens Official Brand Emblem"
                   className="roots-emblem-img"
                 />
                 <div className="roots-emblem-caption">
@@ -91,9 +91,9 @@ export default function Roots() {
                 </div>
               </div>
               <div className="roots-crop-preview">
-                <img 
-                  src="/images/products/sunflower.jpg" 
-                  alt="Sunflower Microgreens Harvest" 
+                <img
+                  src={`${import.meta.env.BASE_URL}images/products/sunflower.jpg`}
+                  alt="Sunflower Microgreens Harvest"
                   className="roots-crop-img"
                 />
                 <div className="roots-crop-caption">

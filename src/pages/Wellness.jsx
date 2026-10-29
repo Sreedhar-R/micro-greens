@@ -94,6 +94,11 @@ const phytochemicals = [
   },
 ];
 
+const BASE = import.meta.env.BASE_URL || '/';
+phytochemicals.forEach(p => {
+  if (p.image && p.image.startsWith('/')) p.image = `${BASE}${p.image.slice(1)}`;
+});
+
 const nutrientMultipliers = [
   { nutrient: 'Vitamin E', multiplier: '35.2 mg / 100g', mature: 'Almonds & Seeds', micro: 'Sunflower Microgreens' },
   { nutrient: 'Chlorophyll', multiplier: 'Ultra High', mature: 'Mature Grass', micro: 'Wheatgrass Microgreens' },

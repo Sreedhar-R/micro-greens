@@ -125,7 +125,7 @@ export default function Seeds() {
               <button
                 type="button"
                 className="btn btn-outline btn-sm"
-                onClick={() => setActiveFlyerModal({ title: 'Manna Microgreens · Official Subscription Plans Flyer', src: '/images/flyers/subscription-plans-flyer.jpg' })}
+                onClick={() => setActiveFlyerModal({ title: 'Manna Microgreens · Official Subscription Plans Flyer', src: `${import.meta.env.BASE_URL}images/flyers/subscription-plans-flyer.jpg` })}
                 style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}
               >
                 <Eye size={14} />
@@ -219,7 +219,7 @@ export default function Seeds() {
               <button
                 type="button"
                 className="btn btn-outline btn-sm"
-                onClick={() => setActiveFlyerModal({ title: 'Manna Microgreens · Our Microgreens & Offerings Flyer', src: '/images/flyers/offerings-flyer.jpg' })}
+                onClick={() => setActiveFlyerModal({ title: 'Manna Microgreens · Our Microgreens & Offerings Flyer', src: `${import.meta.env.BASE_URL}images/flyers/offerings-flyer.jpg` })}
                 style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}
               >
                 <Eye size={14} />

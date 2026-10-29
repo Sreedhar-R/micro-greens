@@ -46,10 +46,10 @@ export default function Navbar() {
         <div className="navbar__inner">
           {/* Logo */}
           <Link to="/" className="navbar__logo" aria-label="Manna Microgreens Home">
-            <img 
-              src="/images/manna-logo.jpg" 
-              alt="Manna Microgreens Logo" 
-              className="navbar__logo-img" 
+            <img
+              src={`${import.meta.env.BASE_URL}images/manna-logo.jpg`}
+              alt="Manna Microgreens Logo"
+              className="navbar__logo-img"
             />
             <div className="navbar__logo-text">
               <span className="navbar__logo-name">Manna</span>

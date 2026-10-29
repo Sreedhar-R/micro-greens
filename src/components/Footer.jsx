@@ -28,10 +28,10 @@ export default function Footer() {
             {/* Brand */}
             <div className="footer__brand">
               <div className="footer__logo">
-                <img 
-                  src="/images/manna-logo.jpg" 
-                  alt="Manna Microgreens Logo" 
-                  className="footer__logo-img" 
+                <img
+                  src={`${import.meta.env.BASE_URL}images/manna-logo.jpg`}
+                  alt="Manna Microgreens Logo"
+                  className="footer__logo-img"
                 />
                 <div>
                   <div className="footer__logo-name">Manna</div>
@@ -42,7 +42,7 @@ export default function Footer() {
                 <em>Fresh. Nutritious. Grown with Care.</em>
               </p>
               <p className="footer__desc">
-                Small greens with big nutritional power. Grown locally indoors with no pesticides, 
+                Small greens with big nutritional power. Grown locally indoors with no pesticides,
                 harvested fresh and delivered straight to your door.
               </p>
               <div className="footer__badges">
